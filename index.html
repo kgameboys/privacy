@@ -50,7 +50,7 @@
       gap: 14px;
       margin-top: 28px;
     }
-    a.card {
+    .card {
       display: block;
       min-height: 132px;
       padding: 20px;
@@ -60,10 +60,8 @@
       border: 1px solid var(--border);
       border-radius: 8px;
     }
-    a.card:focus,
-    a.card:hover {
+    .card:hover {
       border-color: var(--accent);
-      outline: none;
     }
     .card strong {
       display: block;
@@ -72,6 +70,22 @@
       color: var(--text);
     }
     .card span { color: var(--muted); }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .links a:focus,
+    .links a:hover {
+      text-decoration: underline;
+      outline: none;
+    }
     footer {
       margin-top: 34px;
       padding-top: 18px;
@@ -99,17 +113,27 @@
       <p>Legal documents for the Firstgame mobile application.</p>
     </header>
     <nav aria-label="Legal documents">
-      <a class="card" href="./privacy/">
+      <section class="card">
         <strong>Privacy Policy</strong>
         <span>Information about data collection, third-party services, retention, and privacy choices.</span>
-      </a>
-      <a class="card" href="./terms/">
+        <span class="links" aria-label="Privacy Policy versions">
+          <a href="./privacy/">Default</a>
+          <a href="./privacy/us/">US</a>
+          <a href="./privacy/eu/">EU/EEA</a>
+        </span>
+      </section>
+      <section class="card">
         <strong>Terms &amp; Conditions</strong>
         <span>Terms that apply when downloading or using the application.</span>
-      </a>
+        <span class="links" aria-label="Terms and Conditions versions">
+          <a href="./terms/">Default</a>
+          <a href="./terms/us/">US</a>
+          <a href="./terms/eu/">EU/EEA</a>
+        </span>
+      </section>
     </nav>
     <footer>
-      <span>These documents are generated drafts and may be updated before release.</span>
+      <span>The default documents are the global baseline. EU/EEA versions include region-specific privacy and consent language.</span>
     </footer>
   </main>
 </body>
